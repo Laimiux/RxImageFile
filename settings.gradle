@@ -1,1 +1,1 @@
-include ':app', ':rximagefile'
+include ':rximagefile'

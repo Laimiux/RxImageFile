@@ -2,7 +2,6 @@ package com.laimiux.android.rximagefile;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.annotation.NonNull;
 
 import com.laimiux.android.rximagefile.internal.BitmapUtils;
 import com.laimiux.android.rximagefile.internal.Files;
@@ -36,7 +35,7 @@ public class RxImageFile {
     });
   }
 
-  @NonNull public static Observable<byte[]> atMost(final byte[] initial, final int sizeInBytes) {
+  public static Observable<byte[]> atMost(final byte[] initial, final int sizeInBytes) {
     return Observable.create(new Observable.OnSubscribe<byte[]>() {
       @Override public void call(Subscriber<? super byte[]> subscriber) {
         try {
@@ -68,7 +67,7 @@ public class RxImageFile {
     });
   }
 
-  @NonNull public static Observable<byte[]> toBytes(final File imageFile) {
+  public static Observable<byte[]> toBytes(final File imageFile) {
     return Observable.defer(new Func0<Observable<byte[]>>() {
       @Override public Observable<byte[]> call() {
         try {
