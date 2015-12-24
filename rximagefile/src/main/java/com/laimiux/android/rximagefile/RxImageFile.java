@@ -45,7 +45,7 @@ public class RxImageFile {
           while (bytesToRemove > 0 && !subscriber.isUnsubscribed()) {
             if (times > 3) {
               // Increase by 10% because we might be in infinite loop otherwise
-              bytesToRemove *= 0.1f;
+              bytesToRemove *= 1.1f;
             }
 
             current = removeBytes(current, bytesToRemove);
